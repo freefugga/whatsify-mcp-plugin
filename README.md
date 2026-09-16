@@ -13,4 +13,9 @@ Pick your tool:
 | OpenAI Codex CLI | [`codex/`](./codex) |
 | Cursor, Windsurf, Cline, other MCP clients | [`other-clients/`](./other-clients) |
 
+## Getting listed in directories
+
+- **MCP Registry** (neutral, client-agnostic — what ChatGPT/Codex-adjacent tooling and most third-party directories crawl): [`registry/`](./registry) has a ready-to-publish `server.json`.
+- **Anthropic Connectors Directory** (the one-click browse list inside Claude.ai/Desktop): [`CONNECTORS_DIRECTORY_CHECKLIST.md`](./CONNECTORS_DIRECTORY_CHECKLIST.md) — what's done vs. what only you can supply/submit.
+
 This is the source of truth, mirrored (unchanged) as the public [freefugga/whatsify-mcp-plugin](https://github.com/freefugga/whatsify-mcp-plugin) repo that `claude plugin marketplace add` above points to. Re-copy this directory there after any change and push.

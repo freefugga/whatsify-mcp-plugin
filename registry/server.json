@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.freefugga/whatsify",
+  "description": "Send and manage WhatsApp messages, campaigns, contacts, and OTPs from your Whatsify account.",
+  "version": "1.0.0",
+  "websiteUrl": "https://whatsify.me",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.whatsify.me/mcp"
+    }
+  ]
+}
