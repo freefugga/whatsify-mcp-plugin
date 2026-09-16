@@ -4,11 +4,12 @@ This is the one-click browse/install list inside Claude.ai and Claude Desktop's 
 
 ## Done
 
-- **OAuth 2.0 with dynamic client registration** — already live at `https://api.whatsify.me/mcp` ([routes/ai.php](../../routes/ai.php)).
-- **Tool annotations** — every tool in [app/Mcp/Tools](../../app/Mcp/Tools) now declares a `Title` and the applicable `IsReadOnly`/`IsDestructive`.
+- **OAuth 2.0 with dynamic client registration** — already live at `https://api.whatsify.me/mcp` (see `routes/ai.php` in the `whatsify-laravel` backend repo).
+- **Tool annotations** — every tool in the backend's `app/Mcp/Tools` now declares a `Title` and the applicable `IsReadOnly`/`IsDestructive`.
+
 ## Still needed from you
 
-- **Icon** — you pasted it in chat, but I have no way to pull the actual image bytes out of the conversation onto disk. Save it yourself to `integrations/ai-agents/assets/icon.png` (drag it into that folder, or run `open .` there and drop it in) and I'll wire it in on the next pass.
+- **Icon** — you pasted it in chat, but I have no way to pull the actual image bytes out of the conversation onto disk. Save it yourself to `assets/icon.png` in this repo (drag it into that folder, or run `open .` there and drop it in) and I'll wire it in on the next pass.
 
 - **Team or Enterprise Claude.ai org** with Directory permission (Owner by default, or a custom role granting it on Enterprise). Individual plans can't access the submission portal.
 - **A real, public privacy policy URL.** Couldn't confirm whatsify.me has one live — required, and a missing/incomplete one means immediate rejection per Anthropic's review criteria.

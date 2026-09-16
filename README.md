@@ -18,4 +18,4 @@ Pick your tool:
 - **MCP Registry** (neutral, client-agnostic — what ChatGPT/Codex-adjacent tooling and most third-party directories crawl): [`registry/`](./registry) has a ready-to-publish `server.json`.
 - **Anthropic Connectors Directory** (the one-click browse list inside Claude.ai/Desktop): [`CONNECTORS_DIRECTORY_CHECKLIST.md`](./CONNECTORS_DIRECTORY_CHECKLIST.md) — what's done vs. what only you can supply/submit.
 
-This is the source of truth, mirrored (unchanged) as the public [freefugga/whatsify-mcp-plugin](https://github.com/freefugga/whatsify-mcp-plugin) repo that `claude plugin marketplace add` above points to. Re-copy this directory there after any change and push.
+This repo *is* [freefugga/whatsify-mcp-plugin](https://github.com/freefugga/whatsify-mcp-plugin) — the one `claude plugin marketplace add` above points to. It's separate from the `whatsify-laravel` backend repo (which implements the MCP server itself, in `app/Mcp/Tools`); this repo only holds client-side install configs, so edit here and push directly.
