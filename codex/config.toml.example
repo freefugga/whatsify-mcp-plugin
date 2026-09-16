@@ -1,0 +1,18 @@
+# Whatsify MCP server for OpenAI Codex CLI.
+#
+# 1. Get a token: Whatsify dashboard -> Settings -> AI Tools -> Create Token
+#    (shown once at creation — copy it right away).
+# 2. Export it in your shell profile, don't paste it into this file:
+#      export WHATSIFY_MCP_TOKEN="mcp_..."
+# 3. Append the block below to ~/.codex/config.toml (or your project's
+#    .codex/config.toml).
+#
+# Streamable-HTTP MCP servers are first-class in current Codex CLI. If
+# your version predates that, uncomment the `[features]` block too.
+
+# [features]
+# rmcp_client = true
+
+[mcp_servers.whatsify]
+url = "https://api.whatsify.me/mcp"
+bearer_token_env_var = "WHATSIFY_MCP_TOKEN"

@@ -1,0 +1,23 @@
+{
+  "name": "whatsify",
+  "displayName": "Whatsify",
+  "version": "1.0.0",
+  "description": "Send and manage WhatsApp messages, campaigns, contacts, and OTPs from your Whatsify account.",
+  "author": {
+    "name": "Whatsify",
+    "url": "https://whatsify.me"
+  },
+  "homepage": "https://whatsify.me",
+  "license": "MIT",
+  "keywords": ["whatsapp", "messaging", "campaigns", "whatsify", "mcp"],
+  "userConfig": {
+    "mcp_token": {
+      "type": "string",
+      "title": "Whatsify MCP token",
+      "description": "Dashboard → Settings → AI Tools → Create Token. Shown once at creation, so copy it right away.",
+      "required": true,
+      "sensitive": true
+    }
+  },
+  "mcpServers": "./.mcp.json"
+}

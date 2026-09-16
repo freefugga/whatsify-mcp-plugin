@@ -1,0 +1,15 @@
+{
+  "name": "whatsify",
+  "owner": {
+    "name": "Whatsify",
+    "url": "https://whatsify.me"
+  },
+  "plugins": [
+    {
+      "name": "whatsify",
+      "source": "./claude-code",
+      "description": "Send and manage WhatsApp messages, campaigns, contacts, and OTPs from your Whatsify account.",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "whatsify": {
+      "url": "https://api.whatsify.me/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_WHATSIFY_MCP_TOKEN"
+      }
+    }
+  }
+}

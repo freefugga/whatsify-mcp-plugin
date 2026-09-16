@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "whatsify": {
+      "url": "https://api.whatsify.me/mcp",
+      "transport": "http",
+      "headersHelper": "${CLAUDE_PLUGIN_ROOT}/scripts/auth-headers.sh"
+    }
+  }
+}
