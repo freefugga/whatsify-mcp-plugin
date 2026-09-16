@@ -10,14 +10,5 @@
   "homepage": "https://whatsify.me",
   "license": "MIT",
   "keywords": ["whatsapp", "messaging", "campaigns", "whatsify", "mcp"],
-  "userConfig": {
-    "mcp_token": {
-      "type": "string",
-      "title": "Whatsify MCP token",
-      "description": "Dashboard → Settings → AI Tools → Create Token. Shown once at creation, so copy it right away.",
-      "required": true,
-      "sensitive": true
-    }
-  },
   "mcpServers": "./.mcp.json"
 }

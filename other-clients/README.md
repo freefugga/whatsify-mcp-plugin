@@ -1,15 +1,18 @@
 # Whatsify MCP for other AI tools
 
-Any client that speaks standard remote MCP (`mcpServers` with a `url` + `headers`) — Cursor, Windsurf, Cline, and most others — works with [`mcp-config.json.example`](./mcp-config.json.example):
+Whatsify only supports connecting via OAuth right now — there's no manual API token to create and paste. So this works with any client that does OAuth for remote MCP servers (RFC 8414/9728 discovery + dynamic client registration): Cursor, Windsurf, Cline, and most others.
 
-1. Generate a token: dashboard → **Settings → AI Tools → Create Token**.
-2. Copy the block from `mcp-config.json.example`, replace `YOUR_WHATSIFY_MCP_TOKEN`, and merge it into that tool's MCP config file. The `mcpServers` key and file location are the same shape across tools, only the path differs:
+1. Add the server with just its URL — no headers, no token field:
+   ```json
+   { "mcpServers": { "whatsify": { "url": "https://api.whatsify.me/mcp" } } }
+   ```
+   (see [`mcp-config.json.example`](./mcp-config.json.example)). File location differs per tool:
    - Cursor: `~/.cursor/mcp.json` or a project's `.cursor/mcp.json`
    - Windsurf: Windsurf Settings → MCP Servers → "View raw config"
    - Cline (VS Code): the extension's "Configure MCP Servers" command
-   - Anything else: check that tool's own MCP docs for its config file path — the JSON shape above is the standard one.
-3. Restart the tool and confirm `whatsify` shows up as a connected MCP server.
+   - Anything else with a built-in "add remote MCP server / custom connector" UI (e.g. Claude Desktop, Claude.ai): just paste the URL there instead of editing JSON.
+2. Connect / restart the tool. It should open your browser to Whatsify's login/consent screen — sign in, approve the permissions, and the tool stores the resulting credentials itself.
 
-## OAuth instead of a token
+## If your tool only supports a static Bearer token
 
-The Whatsify MCP server also supports full OAuth (dynamic client registration) at `https://api.whatsify.me/mcp`. If your tool has a built-in "add remote MCP server" / "custom connector" flow instead of a raw JSON config (e.g. Claude.ai, Claude Desktop's Settings → Connectors), just give it the URL — it'll open a browser to log in and consent, and no manual token is needed.
+Some simpler or older MCP clients don't implement the OAuth flow and only accept a fixed `Authorization` header. Whatsify doesn't currently issue those (no "create token" option in the dashboard yet, even though the API path exists) — those clients can't connect to Whatsify yet.
